@@ -1,0 +1,63 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/1.0.0/server.json",
+  "name": "church-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Kenya religious institutions and community services \u2014 Catholic dioceses, Protestant denominations, Muslim communities, welfare programs, legal registration, and community welfare. 6 tools.",
+  "license": "MIT",
+  "homepage": "https://gabrielmahia.github.io",
+  "author": {
+    "name": "Gabriel Mahia",
+    "email": "contact@aikungfu.dev",
+    "url": "https://gabrielmahia.github.io"
+  },
+  "keywords": [
+    "kenya",
+    "church",
+    "religion",
+    "welfare",
+    "community",
+    "civic",
+    "catholic",
+    "protestant",
+    "mcp"
+  ],
+  "categories": [
+    "Government Data",
+    "Search"
+  ],
+  "tools": [
+    {
+      "name": "catholic_dioceses",
+      "description": "Catholic dioceses directory"
+    },
+    {
+      "name": "protestant_denominations",
+      "description": "Protestant denominations guide"
+    },
+    {
+      "name": "muslim_communities",
+      "description": "Muslim communities guide"
+    },
+    {
+      "name": "welfare_services",
+      "description": "Welfare services directory"
+    },
+    {
+      "name": "legal_registration",
+      "description": "Legal registration guide"
+    },
+    {
+      "name": "community_welfare",
+      "description": "Community welfare resources"
+    }
+  ],
+  "installation": {
+    "type": "pip",
+    "package": "church-mcp",
+    "command": "pip install church-mcp"
+  },
+  "links": {
+    "github": "https://github.com/gabrielmahia/church-mcp",
+    "pypi": "https://pypi.org/project/church-mcp"
+  }
+}
