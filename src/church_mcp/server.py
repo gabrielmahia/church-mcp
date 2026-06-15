@@ -2,7 +2,7 @@
 from __future__ import annotations
 from typing import Optional
 from fastmcp import FastMCP
-mcp = FastMCP(name="church-mcp", description="Kenya community and religious institution infrastructure. DEMO.")
+mcp = FastMCP(name="church-mcp", instructions="Kenya community and religious institution infrastructure. DEMO.")
 
 @mcp.tool(name="catholic_diocese_finder", description="Kenya Catholic Church dioceses and welfare services. DEMO.")
 def catholic_diocese_finder(county: Optional[str] = None) -> dict:
