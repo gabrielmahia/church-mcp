@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "church-mcp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Kenya community and religious institution infrastructure via MCP. Catholic, Protestant, Muslim. 6 tools. Thesis L3/L6."
 readme = "README.md"
 license = { text = "MIT" }
