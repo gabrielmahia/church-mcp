@@ -1,5 +1,8 @@
 # church-mcp
 
+[![church-mcp Glama score](https://glama.ai/mcp/servers/gabrielmahia/church-mcp/badges/score.svg)](https://glama.ai/mcp/servers/gabrielmahia/church-mcp)
+
+
 > Kenya community and religious institution infrastructure via MCP.
 
 [![PyPI](https://img.shields.io/badge/PyPI-v0.1.0-blue?logo=pypi)](https://pypi.org/project/church-mcp/)
