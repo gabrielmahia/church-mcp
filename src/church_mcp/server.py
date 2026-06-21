@@ -36,6 +36,7 @@ def protestant_denomination_guide() -> dict:
 
 @mcp.tool(name="muslim_community_guide", description="Kenya Muslim communities, organizations, and services. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def muslim_community_guide(county: Annotated[Optional[str], "County to find Muslim community resources in."] = None) -> dict:
+    """Return Muslim community organisations, mosques, and welfare services in Kenya."""
     return {"source": "DEMO", "kenya_muslims": "~11% of Kenya population. Concentrated in Coast, North Eastern, Nairobi Eastleigh",
             "organizations": [
                 {"name": "SUPKEM", "full": "Supreme Council of Kenya Muslims", "contact": "supkem.or.ke", "role": "Umbrella body, halal certification"},
