@@ -1,11 +1,11 @@
 """ChurchMCP — Kenya Community Religious Institution Infrastructure (6 tools). DEMO."""
 from __future__ import annotations
-from typing import Optional
+from typing import Annotated, Optional
 from fastmcp import FastMCP
 mcp = FastMCP(name="church-mcp", instructions="Kenya community and religious institution infrastructure. DEMO.")
 
-@mcp.tool(name="catholic_diocese_finder", description="Kenya Catholic Church dioceses and welfare services. DEMO.")
-def catholic_diocese_finder(county: Optional[str] = None) -> dict:
+@mcp.tool(name="catholic_diocese_finder", description="Kenya Catholic Church dioceses and welfare services. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def catholic_diocese_finder(county: Annotated[Optional[str], "Optional filter for county. Pass None to return all results."] = None) -> dict:
     DIOCESES = [
         {"name": "Archdiocese of Nairobi", "counties": ["Nairobi", "Kiambu"], "parishes": "80+", "contact": "archdioceseofnairobi.org"},
         {"name": "Diocese of Mombasa", "counties": ["Mombasa", "Kwale", "Kilifi", "Tana River", "Lamu"], "contact": "catholicmombasa.org"},
@@ -22,7 +22,7 @@ def catholic_diocese_finder(county: Optional[str] = None) -> dict:
             "welfare": "Caritas Kenya: caritaskenya.org",
             "note": "~33% of Kenyans are Catholic. Church runs ~500 health facilities, ~3,000 schools in Kenya."}
 
-@mcp.tool(name="protestant_denomination_guide", description="Major Protestant denominations in Kenya and their services. DEMO.")
+@mcp.tool(name="protestant_denomination_guide", description="Major Protestant denominations in Kenya and their services. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def protestant_denomination_guide() -> dict:
     return {"source": "DEMO — NCCK Kenya", "denominations": {
         "ACK": {"full": "Anglican Church of Kenya", "members_m": 5.0, "contact": "ackenya.com", "welfare": "Hospitals, schools, development"},
@@ -34,8 +34,8 @@ def protestant_denomination_guide() -> dict:
     }, "ncck": "National Council of Churches of Kenya: ncck.or.ke",
         "protestant_pct": "~47% of Kenyans identify as Protestant/Evangelical"}
 
-@mcp.tool(name="muslim_community_guide", description="Kenya Muslim communities, organizations, and services. DEMO.")
-def muslim_community_guide(county: Optional[str] = None) -> dict:
+@mcp.tool(name="muslim_community_guide", description="Kenya Muslim communities, organizations, and services. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def muslim_community_guide(county: Annotated[Optional[str], "County to find Muslim community resources in."] = None) -> dict:
     return {"source": "DEMO", "kenya_muslims": "~11% of Kenya population. Concentrated in Coast, North Eastern, Nairobi Eastleigh",
             "organizations": [
                 {"name": "SUPKEM", "full": "Supreme Council of Kenya Muslims", "contact": "supkem.or.ke", "role": "Umbrella body, halal certification"},
@@ -49,7 +49,7 @@ def muslim_community_guide(county: Optional[str] = None) -> dict:
             "halal": "Halal certification: SUPKEM | Kenya Bureau of Standards (KEBS)",
             "county_focus": county or "All counties"}
 
-@mcp.tool(name="religious_community_services", description="Welfare and social services by Kenya religious institutions. DEMO.")
+@mcp.tool(name="religious_community_services", description="Welfare and social services by Kenya religious institutions. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def religious_community_services() -> dict:
     return {"source": "DEMO", "services": {
         "education": "Catholic: ~3,000 schools. ACK/AIC/PCEA: ~2,000 schools. Islamic madrasa: ~200 centres.",
@@ -59,7 +59,7 @@ def religious_community_services() -> dict:
         "dispute_resolution": "Religious leaders serve as trusted mediators — often faster and cheaper than courts.",
     }, "key_principle": "Religious institutions are Kenya's most accessible welfare network, especially outside Nairobi."}
 
-@mcp.tool(name="church_legal_registration", description="How to register a religious organization in Kenya. DEMO.")
+@mcp.tool(name="church_legal_registration", description="How to register a religious organization in Kenya. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def church_legal_registration() -> dict:
     return {"source": "DEMO — Societies Act, NGO Coordination Board",
             "options": {
@@ -71,8 +71,8 @@ def church_legal_registration() -> dict:
             "registrar_of_societies": "attorney-general.go.ke | 020-2227461",
             "disclaimer": "Not legal advice. Consult an advocate."}
 
-@mcp.tool(name="community_welfare_guide", description="How to access Kenya religious community welfare programs. DEMO.")
-def community_welfare_guide(need: Optional[str] = None) -> dict:
+@mcp.tool(name="community_welfare_guide", description="How to access Kenya religious community welfare programs. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def community_welfare_guide(need: Annotated[Optional[str], "Optional filter for need. Pass None to return all results."] = None) -> dict:
     PROGRAMS = {
         "food_emergency": "Caritas Kenya (Catholic), NCCK (Protestant), mosque sadaqah funds",
         "medical_support": "Mission hospitals cross-subsidise uninsured patients. Tell the accounts desk your situation.",
