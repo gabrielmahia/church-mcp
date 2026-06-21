@@ -2,10 +2,11 @@
 from __future__ import annotations
 from typing import Annotated, Optional
 from fastmcp import FastMCP
+from pydantic import Field
 mcp = FastMCP(name="church-mcp", instructions="Kenya community and religious institution infrastructure. DEMO.")
 
 @mcp.tool(name="catholic_diocese_finder", description="Kenya Catholic Church dioceses and welfare services. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
-def catholic_diocese_finder(county: Annotated[Optional[str], "Optional filter for county. Pass None to return all results."] = None) -> dict:
+def catholic_diocese_finder(county: Optional[str] = Field(None, description="Optional filter for county. Pass None to return all results.")) -> dict:
     DIOCESES = [
         {"name": "Archdiocese of Nairobi", "counties": ["Nairobi", "Kiambu"], "parishes": "80+", "contact": "archdioceseofnairobi.org"},
         {"name": "Diocese of Mombasa", "counties": ["Mombasa", "Kwale", "Kilifi", "Tana River", "Lamu"], "contact": "catholicmombasa.org"},
@@ -35,7 +36,7 @@ def protestant_denomination_guide() -> dict:
         "protestant_pct": "~47% of Kenyans identify as Protestant/Evangelical"}
 
 @mcp.tool(name="muslim_community_guide", description="Kenya Muslim communities, organizations, and services. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
-def muslim_community_guide(county: Annotated[Optional[str], "County to find Muslim community resources in."] = None) -> dict:
+def muslim_community_guide(county: Optional[str] = Field(None, description="County to find Muslim community resources in.")) -> dict:
     """Return Muslim community organisations, mosques, and welfare services in Kenya."""
     return {"source": "DEMO", "kenya_muslims": "~11% of Kenya population. Concentrated in Coast, North Eastern, Nairobi Eastleigh",
             "organizations": [
@@ -73,7 +74,7 @@ def church_legal_registration() -> dict:
             "disclaimer": "Not legal advice. Consult an advocate."}
 
 @mcp.tool(name="community_welfare_guide", description="How to access Kenya religious community welfare programs. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
-def community_welfare_guide(need: Annotated[Optional[str], "Optional filter for need. Pass None to return all results."] = None) -> dict:
+def community_welfare_guide(need: Optional[str] = Field(None, description="Optional filter for need. Pass None to return all results.")) -> dict:
     PROGRAMS = {
         "food_emergency": "Caritas Kenya (Catholic), NCCK (Protestant), mosque sadaqah funds",
         "medical_support": "Mission hospitals cross-subsidise uninsured patients. Tell the accounts desk your situation.",
