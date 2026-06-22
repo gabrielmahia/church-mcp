@@ -27,7 +27,9 @@
     "open-data",
     "coordination-infrastructure",
     "institutional-infrastructure",
-    "africa"
+    "africa",
+    "useful-rails",
+    "ai-agents"
   ],
   "categories": [
     "Government Data",
