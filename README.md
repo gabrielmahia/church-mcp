@@ -32,3 +32,7 @@ pip install church-mcp
 
 ## License
 MIT © Gabriel Mahia | contact@aikungfu.dev
+
+## IP & Collaboration
+
+MIT licensed. Feedback via GitHub Issues only — pull requests are not accepted. Demo data is labeled DEMO and is not suitable for operational decisions. Full policy: [docs/architecture/IP_POLICY.md](docs/architecture/IP_POLICY.md). Security reports: see [SECURITY.md](SECURITY.md).
