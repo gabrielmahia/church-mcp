@@ -90,3 +90,7 @@ def community_welfare_guide(need: Optional[str] = Field(None, description="Optio
         return {"source": "DEMO", "need": need, "guidance": matched or PROGRAMS}
     return {"source": "DEMO", "programs": PROGRAMS,
             "how_to_access": "Visit your nearest church or mosque. Most communities welcome those in need regardless of membership status."}
+
+def main() -> None:
+    """Console entry point."""
+    mcp.run()
