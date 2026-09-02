@@ -1,50 +1,59 @@
 # church-mcp
-<!-- mcp-name: io.github.gabrielmahia/church-mcp -->
 
-[![church-mcp Glama score](https://glama.ai/mcp/servers/gabrielmahia/church-mcp/badges/score.svg)](https://glama.ai/mcp/servers/gabrielmahia/church-mcp)
-[![smithery badge](https://smithery.ai/badge/@gabrielmahia/church-mcp)](https://smithery.ai/server/@gabrielmahia/church-mcp)
+## Why This Exists
 
-
-> Kenya community and religious institution infrastructure via MCP.
-
-[![PyPI](https://img.shields.io/badge/PyPI-v0.1.0-blue?logo=pypi)](https://pypi.org/project/church-mcp/)
-[![Thesis Layer](https://img.shields.io/badge/Thesis_Layer-L3_L6-purple)](https://gabrielmahia.github.io/nairobi-stack)
-
-> *"Build with communities, not merely for communities."*
-
-~33% Catholic · ~47% Protestant · ~11% Muslim. Kenya's religious institutions serve as its most accessible social safety net.
+Faith institutions run a substantial share of Kenya's schools, clinics and welfare programmes, but their service directories are fragmented by denomination. For someone seeking help, the relevant question is what is nearby and open, not who runs it.
 
 ## Install
+
 ```bash
 pip install church-mcp
 ```
 
 ## Tools (6)
-| Tool | Description |
-|------|-------------|
-| `catholic_diocese_finder` | Kenya Catholic dioceses, parishes, welfare |
-| `protestant_denomination_guide` | ACK, PCEA, AIC, SDA, Methodist, Pentecostal, NCCK |
-| `muslim_community_guide` | SUPKEM, CIPK, major mosques, halal |
-| `religious_community_services` | Education, health, welfare, dispute resolution |
-| `church_legal_registration` | Register a religious org in Kenya |
-| `community_welfare_guide` | Access food, medical, bursary, counselling programs |
 
-→ [The Nairobi Stack](https://gabrielmahia.github.io/nairobi-stack)
+- **`catholic_diocese_finder`** —   
+  <sub>args: county</sub>
+- **`protestant_denomination_guide`** —   
+  <sub>args: no arguments</sub>
+- **`muslim_community_guide`** — Return Muslim community organisations, mosques, and welfare services in Kenya.  
+  <sub>args: county</sub>
+- **`religious_community_services`** —   
+  <sub>args: no arguments</sub>
+- **`church_legal_registration`** —   
+  <sub>args: no arguments</sub>
+- **`community_welfare_guide`** —   
+  <sub>args: need</sub>
 
-## License
-MIT © Gabriel Mahia | contact@aikungfu.dev
+## Example
 
-## IP & Collaboration
+```python
+from church_mcp.server import denomination_directory
 
-MIT licensed. Feedback via GitHub Issues only — pull requests are not accepted. Demo data is labeled DEMO and is not suitable for operational decisions. Full policy: [docs/architecture/IP_POLICY.md](docs/architecture/IP_POLICY.md). Security reports: see [SECURITY.md](SECURITY.md).
+result = denomination_directory()
+# denominations, structures, welfare programmes, contacts
+```
 
-<!-- interconnect:v1 -->
-## Part of the East Africa coordination stack
+## Claude Desktop Integration
 
-- **Install & run:** `pip install reli-cli && reli list` — 33 MCP servers on the [official MCP Registry](https://registry.modelcontextprotocol.io) under `io.github.gabrielmahia`
-- **Evaluate any model on Swahili agent tasks:** [kipimo](https://github.com/gabrielmahia/kipimo) · [dataset](https://huggingface.co/datasets/gmahia/kipimo) · [leaderboard](https://huggingface.co/spaces/gmahia/kipimo-leaderboard)
-- **Coordinate across servers:** [africa-coord-bus](https://pypi.org/project/africa-coord-bus/) — offline-first event bus with a built-in Kenya routing table
-- **Datasets:** [huggingface.co/gmahia](https://huggingface.co/gmahia) · **Docs hub:** [nairobi-stack](https://github.com/gabrielmahia/nairobi-stack)
+Add to `claude_desktop_config.json`:
 
-Model-agnostic by design: closed APIs, open-weight models, and small distilled models are all first-class citizens.
-<!-- /interconnect:v1 -->
+```json
+{
+  "mcpServers": {
+    "church-mcp": {
+      "command": "python",
+      "args": ["-m", "church_mcp.server"]
+    }
+  }
+}
+```
+
+## Data & Disclaimers
+
+Directory information compiled from public sources and changes as institutions do. Confirm services and contacts directly before travelling to a facility.
+
+Every tool response carries a `source` field. Responses labelled `DEMO` are
+illustrative reference data, not a live feed — verify against the authority
+named in the response before acting on it.
+
