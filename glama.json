@@ -1,8 +1,8 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/1.0.0/server.json",
   "name": "church-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for Kenya religious institutions and community services \u2014 Catholic dioceses, Protestant denominations, Muslim communities, welfare programs, legal registration, and community welfare. 6 tools.",
+  "version": "0.1.4",
+  "description": "Kenya community and religious institution infrastructure via MCP. Catholic, Protestant, Muslim. 6 tools. Thesis L3/L6.",
   "license": "MIT",
   "homepage": "https://gabrielmahia.github.io",
   "author": {
@@ -37,28 +37,28 @@
   ],
   "tools": [
     {
-      "name": "catholic_dioceses",
-      "description": "Catholic dioceses directory"
+      "name": "catholic_diocese_finder",
+      "description": "Kenya Catholic Church dioceses and welfare services. DEMO."
     },
     {
-      "name": "protestant_denominations",
-      "description": "Protestant denominations guide"
+      "name": "protestant_denomination_guide",
+      "description": "Major Protestant denominations in Kenya and their services. DEMO."
     },
     {
-      "name": "muslim_communities",
-      "description": "Muslim communities guide"
+      "name": "muslim_community_guide",
+      "description": "Kenya Muslim communities, organizations, and services. DEMO."
     },
     {
-      "name": "welfare_services",
-      "description": "Welfare services directory"
+      "name": "religious_community_services",
+      "description": "Welfare and social services by Kenya religious institutions. DEMO."
     },
     {
-      "name": "legal_registration",
-      "description": "Legal registration guide"
+      "name": "church_legal_registration",
+      "description": "How to register a religious organization in Kenya. DEMO."
     },
     {
-      "name": "community_welfare",
-      "description": "Community welfare resources"
+      "name": "community_welfare_guide",
+      "description": "How to access Kenya religious community welfare programs. DEMO."
     }
   ],
   "installation": {
@@ -69,5 +69,8 @@
   "links": {
     "github": "https://github.com/gabrielmahia/church-mcp",
     "pypi": "https://pypi.org/project/church-mcp"
-  }
+  },
+  "maintainers": [
+    "gabrielmahia"
+  ]
 }
