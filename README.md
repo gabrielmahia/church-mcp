@@ -1,4 +1,5 @@
 # church-mcp
+<!-- mcp-name: io.github.gabrielmahia/church-mcp -->
 
 ## Why This Exists
 
