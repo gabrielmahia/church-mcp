@@ -1,7 +1,7 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/1.0.0/server.json",
   "name": "church-mcp",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Kenya community and religious institution infrastructure via MCP. Catholic, Protestant, Muslim. 6 tools. Thesis L3/L6.",
   "license": "MIT",
   "homepage": "https://gabrielmahia.github.io",
