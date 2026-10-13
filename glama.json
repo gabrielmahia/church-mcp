@@ -38,27 +38,27 @@
   "tools": [
     {
       "name": "catholic_diocese_finder",
-      "description": "Kenya Catholic Church dioceses and welfare services. DEMO."
+      "description": "List sample Catholic dioceses in Kenya by county, with the Kenya Conference of Catholic Bishops and Caritas Kenya pointers. Use when someone asks which diocese covers a county. county filters by matching text; an unmatched county returns a note to check kccb.or.ke. Returns the source label, county, the dioceses and welfare contacts. A short sample labelled DEMO, not the full list. Church-run service counts are rough and unverified. Read-only; no side effects."
     },
     {
       "name": "protestant_denomination_guide",
-      "description": "Major Protestant denominations in Kenya and their services. DEMO."
+      "description": "Overview of major Protestant and Pentecostal denominations in Kenya (ACK, PCEA, AIC, SDA, MCK, Pentecostal churches) with indicative membership, contacts and welfare work. Use when someone asks about a denomination. Takes no arguments. Returns the source label, the denominations and the NCCK pointer. Membership figures are rough, unverified estimates labelled DEMO, and religious shares differ between sources: check the 2019 census tables. Read-only; no side effects."
     },
     {
       "name": "muslim_community_guide",
-      "description": "Kenya Muslim communities, organizations, and services. DEMO."
+      "description": "Overview of Kenya's Muslim community: where it is concentrated, major organisations such as SUPKEM, notable mosques and halal certification. Use when someone asks about Muslim organisations or institutions. county is only echoed back as a focus label. Returns the source label, the community overview (about 11% of the population in the 2019 census), organisations, mosques, halal certification and the county focus. A short overview labelled DEMO. Read-only; no side effects."
     },
     {
       "name": "religious_community_services",
-      "description": "Welfare and social services by Kenya religious institutions. DEMO."
+      "description": "Education, health and welfare services run by religious communities in Kenya, with examples. Use when someone asks what help faith institutions provide. Takes no arguments. Returns the source label, the services by area and a key principle. Counts such as numbers of schools are rough and unverified, labelled DEMO. Read-only; no side effects."
     },
     {
       "name": "church_legal_registration",
-      "description": "How to register a religious organization in Kenya. DEMO."
+      "description": "Legal routes for registering a church or religious body in Kenya (society, trust, NGO or company) with the law, fee, timeline and best use. Use when someone wants to set up a congregation or organisation. Takes no arguments. Returns the source label, the options, the registrar contact and a disclaimer. Fees and timelines are indicative and labelled DEMO and not legal advice: consult an advocate. Read-only; no side effects."
     },
     {
       "name": "community_welfare_guide",
-      "description": "How to access Kenya religious community welfare programs. DEMO."
+      "description": "Where to get food, medical, education and other welfare help through faith-based and community programmes in Kenya. Use when someone asks where to find help. need matches by name or text; if none match, ALL programmes are returned. Returns the source label, the need and the guidance, and how to access help. A short list labelled DEMO: confirm availability with the organisation. Read-only; no side effects."
     }
   ],
   "installation": {
