@@ -1,12 +1,20 @@
 """ChurchMCP — Kenya Community Religious Institution Infrastructure (6 tools). DEMO."""
 from __future__ import annotations
 
+from importlib.metadata import PackageNotFoundError
+from importlib.metadata import version as _pkg_version
 from typing import Annotated, Optional
 
 from fastmcp import FastMCP
 from pydantic import Field
 
-mcp = FastMCP(name="church-mcp", instructions="Kenya community and religious institution infrastructure. DEMO.")
+try:
+    _VERSION = _pkg_version("church-mcp")
+except PackageNotFoundError:  # a source tree that was never installed
+    _VERSION = "0+unknown"
+
+
+mcp = FastMCP(name="church-mcp", instructions="Kenya community and religious institution infrastructure. DEMO.", version=_VERSION)
 
 @mcp.tool(name="catholic_diocese_finder", description="List sample Catholic dioceses in Kenya by county, with the Kenya Conference of Catholic Bishops and Caritas Kenya pointers. Use when someone asks which diocese covers a county. county filters by matching text; an unmatched county returns a note to check kccb.or.ke. Returns the source label, county, the dioceses and welfare contacts. A short sample labelled DEMO, not the full list. Church-run service counts are rough and unverified. Read-only; no side effects.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def catholic_diocese_finder(county: str | None = Field(None, description="Optional filter for county. Pass None to return all results.")) -> dict:
