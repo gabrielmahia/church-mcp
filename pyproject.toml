@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "church-mcp"
-version = "0.1.10"
+version = "0.1.11"
 description = "Kenya community and religious institution infrastructure via MCP. Catholic, Protestant, Muslim. 6 tools. Thesis L3/L6."
 readme = "README.md"
 license = "MIT"
@@ -23,6 +23,7 @@ classifiers = [
 church-mcp = "church_mcp.server:mcp.run"
 
 [project.urls]
+Issues = "https://github.com/gabrielmahia/church-mcp/issues"
 Homepage = "https://github.com/gabrielmahia/church-mcp"
 Documentation = "https://github.com/gabrielmahia/nairobi-stack"
 "MCP Registry" = "https://registry.modelcontextprotocol.io"
