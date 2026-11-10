@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 type: software
 title: "church-mcp"
 abstract: "Kenya community and religious institution infrastructure via MCP. Catholic, Protestant, Muslim. 6 tools. Thesis L3/L6."
-version: "0.1.11"
+version: "0.1.12"
 authors:
   - family-names: "Mahia"
     given-names: "Gabriel"
